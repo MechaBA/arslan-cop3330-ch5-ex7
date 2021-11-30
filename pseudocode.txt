@@ -1,0 +1,41 @@
+
+Roots
+void roots(int a, int b, int c)
+{
+
+Variables
+    float r1, r2, x, y;
+    int disc = (b*b) - (4*a*c);
+
+Statement    if(disc == 0)
+    {
+        r1 =(float)(-b + sqrt(disc)) / (2*a);
+Output        cout << "\nRoots: \nRoot 1 = \nRoot 2 = "<<r1<< endl;
+    }
+    else if(disc>0)
+    {
+Output        r1 = (float)(-b+sqrt(disc)) / (2*a);
+Output        r2 = (float)(-b-sqrt(disc)) / (2*a);
+        cout << "\nRoots: \nRoot 1 = "<<r1<<" \nRoot 2 = "<<r2<< endl;
+    }
+    else
+    {
+Establish Equation        x = (float)(-b/(2*a));
+Establish Equation        y = (float)(sqrt(-disc) / (2*a));
+Output        cout << "\nRoots: Root 1 = "<<x<<"+"<<y<<"i"<< endl;
+Output        cout << "r2 = " << x << "-" << y << "i" << endl;
+    }
+}
+
+
+Function
+int main()
+{
+    cout<<"Quadratic equation: ax^2 + bx + c\n";
+
+Variables    int a, b, c;
+Input    cout<<"Enter a, b, and c for the quadratic equation: \n";
+    cin>>a>>b>>c;
+    roots(a, b, c);
+    return 0;
+}
